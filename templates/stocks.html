@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+  <h1>List of Stocks</h1>
+
+  <table>
+    <!-- Table Header Row -->
+    <thead>
+      <tr>
+        <th>Stock Symbol</th>
+        <th>Number of Shares</th>
+        <th>Purchase Price</th>
+      </tr>
+    </thead>
+
+    <!-- Table Element (Row) -->
+    <tbody>
+      <td>{{ session['symbol'] }}</td>
+      <td>{{ session['shares'] }}</td>
+      <td>${{ session['price'] }}</td>
+    </tbody>
+  </table>
+</div>
+<a href="/stocks/add">add a stock</a>
+{% endblock %}

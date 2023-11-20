@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Add a Stock:</h2>
+<form method="post">
+  <label for="stockSymbol">Stock Symbol <em>(required, 1-5 uppercase letters)</em></label>
+  <input type="text" id="stockSymbol" name="symbol" required pattern="[A-Z]{1,5}" />
+  <br>
+  <label for="numberOfShares">Number of Shares <em>(required)</em></label>
+  <input type="text" id="numberOfShares" name="shares" required />
+  <br>
+  <label for="purchasePrice">Purchase Price ($) <em>(required)</em></label>
+  <input type="text" id="purchasePrice" name="price" placeholder="$300.00" required />
+  <br>
+  <input type="submit">
+</form>
+<a href="/stocks/list">back to stocks list</a>
+{% endblock %}
